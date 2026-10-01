@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="id" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIAMOND GYM - Gym Jalur Prestasi Bontang</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0A0A0A',
+                        darkCard: '#141414',
+                        neonLime: '#CCFF00',
+                        neonRed: '#FF2A2A',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Inter & Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0A;
+            color: #F3F4F6;
+        }
+        h1, h2, h3, .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .glow-lime {
+            box-shadow: 0 0 25px rgba(204, 255, 0, 0.4);
+        }
+        .glow-lime-hover:hover {
+            box-shadow: 0 0 35px rgba(204, 255, 0, 0.7);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0A0A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #262626;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #CCFF00;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-100 selection:bg-neonLime selection:text-black">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-darkBg/90 backdrop-blur-md border-b border-neutral-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-lg bg-neonLime flex items-center justify-center font-black text-black text-xl italic tracking-tighter shadow-lg glow-lime">
+                    DG
+                </div>
+                <div>
+                    <span class="font-heading font-black text-lg tracking-wider text-white block leading-tight">DIAMOND<span class="text-neonLime">.GYM</span></span>
+                    <span class="text-[10px] text-gray-400 tracking-widest uppercase block">Gym Jalur Prestasi - Bontang</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide">
+                <a href="#program" class="hover:text-neonLime transition">PROGRAM</a>
+                <a href="#jadwal" class="hover:text-neonLime transition">JADWAL</a>
+                <a href="#trainer" class="hover:text-neonLime transition">TRAINER</a>
+                <a href="#membership" class="hover:text-neonLime transition">MEMBERSHIP</a>
+                <a href="#ulasan" class="hover:text-neonLime transition">ULASAN (4.7★)</a>
+                <a href="#kontak" class="hover:text-neonLime transition">LOKASI</a>
+            </nav>
+            <div class="flex items-center space-x-3">
+                <a href="https://www.instagram.com/dion_diamondgym?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" class="hidden sm:inline-flex items-center space-x-1 bg-neutral-900 border border-neutral-700 text-neonLime text-xs font-bold px-3 py-2 rounded-xl hover:bg-neutral-800 transition">
+                    <span>IG Owner</span>
+                </a>
+                <a href="#membership" class="bg-neonLime text-black font-extrabold px-5 py-2.5 rounded-xl uppercase text-xs tracking-wider glow-lime glow-lime-hover transition duration-300">
+                    Gabung
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1920&auto=format&fit=crop" alt="Diamond Gym Action" class="w-full h-full object-cover object-center scale-105 opacity-35">
+                <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-darkBg/70 to-transparent"></div>
+            </div>
+
+            <div class="relative z-10 max-w-5xl mx-auto px-4 text-center py-20">
+                <div class="inline-flex items-center space-x-2 py-1 px-4 rounded-full bg-neonLime/10 border border-neonLime/30 text-neonLime font-bold text-xs uppercase tracking-widest mb-6">
+                    <span>⭐ 4.7/5 dari 31 Ulasan Google Maps</span>
+                    <span>•</span>
+                    <span>Pusat Atlet Berprestasi</span>
+                </div>
+                <h1 class="font-heading font-black text-4xl sm:text-6xl lg:text-7xl uppercase tracking-tight text-white mb-6 leading-none">
+                    TEMPAT GYM TERNYAMAN & <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonLime to-emerald-400">PENCETAK ATLET DI BONTANG</span>
+                </h1>
+                <p class="max-w-2xl mx-auto text-gray-400 text-base sm:text-lg mb-10 font-normal">
+                    Selamat datang di <strong>Diamond Gym (Gym Jalur Prestasi)</strong>, pusat kebugaran terbaik di Kota Bontang dengan fasilitas alat super lengkap, terbaru di lantai 2, serta atmosfer pembentukan mental juara.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#membership" class="w-full sm:w-auto bg-neonLime text-black font-extrabold px-8 py-4 rounded-xl uppercase text-sm tracking-wider glow-lime glow-lime-hover transition duration-300">
+                        Daftar Member Sekarang
+                    </a>
+                    <a href="#ulasan" class="w-full sm:w-auto bg-neutral-900 border border-neutral-700 text-white font-bold px-8 py-4 rounded-xl uppercase text-sm tracking-wider hover:bg-neutral-800 transition duration-300">
+                        Baca Ulasan Member
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="program" class="py-24 bg-darkBg border-t border-neutral-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-neonLime font-bold text-xs uppercase tracking-widest mb-2">FASILITAS & PROGRAM UTAMA</h2>
+                    <h3 class="font-heading font-black text-3xl sm:text-4xl text-white uppercase tracking-tight">ALAT LENGKAP DI LANTAI 2</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Program 1 -->
+                    <div class="bg-darkCard rounded-2xl overflow-hidden border border-neutral-800 hover:border-neonLime/50 transition duration-300 group">
+                        <div class="aspect-square overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=800&auto=format&fit=crop" alt="Bodybuilding" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-darkCard via-transparent to-transparent"></div>
+                            <span class="absolute top-4 left-4 bg-black/70 backdrop-blur-md px-3 py-1 rounded-lg text-xs font-bold text-neonLime border border-neonLime/25">STRENGTH & HYPERTROPHY</span>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-heading font-extrabold text-xl text-white mb-2 uppercase">Jalur Atlet & Pembentukan Otot</h4>
+                            <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                                Dilengkapi jajaran alat beban baru yang lengkap di lantai 2 untuk memaksimalkan latihan beban, baik bagi pemula maupun calon atlet berprestasi.
+                            </p>
+                            <a href="#membership" class="inline-flex items-center text-xs font-bold text-neonLime uppercase tracking-wider hover:underline">
+                                Mulai Latihan &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Program 2 -->
+                    <div class="bg-darkCard rounded-2xl overflow-hidden border border-neutral-800 hover:border-neonLime/50 transition duration-300 group">
+                        <div class="aspect-square overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=800&auto=format&fit=crop" alt="HIIT & Cardio" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-darkCard via-transparent to-transparent"></div>
+                            <span class="absolute top-4 left-4 bg-black/70 backdrop-blur-md px-3 py-1 rounded-lg text-xs font-bold text-neonRed border border-neonRed/25">FAT LOSS</span>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-heading font-extrabold text-xl text-white mb-2 uppercase">Kardio & Pembakaran Lemak</h4>
+                            <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                                Sesi latihan kardio intensif untuk menurunkan berat badan, meningkatkan stamina, dan membentuk tubuh ideal dengan suasana gym yang sangat nyaman.
+                            </p>
+                            <a href="#membership" class="inline-flex items-center text-xs font-bold text-neonLime uppercase tracking-wider hover:underline">
+                                Mulai Latihan &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Program 3 -->
+                    <div class="bg-darkCard rounded-2xl overflow-hidden border border-neutral-800 hover:border-neonLime/50 transition duration-300 group">
+                        <div class="aspect-square overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop" alt="Yoga & Mobility" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-darkCard via-transparent to-transparent"></div>
+                            <span class="absolute top-4 left-4 bg-black/70 backdrop-blur-md px-3 py-1 rounded-lg text-xs font-bold text-sky-400 border border-sky-400/25">RECOVERY</span>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-heading font-extrabold text-xl text-white mb-2 uppercase">Mobilitas & Pendinginan</h4>
+                            <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                                Jaga kelenturan tubuh dan percepat pemulihan otot setelah latihan berat dengan fasilitas stretching area yang nyaman dan higienis.
+                            </p>
+                            <a href="#membership" class="inline-flex items-center text-xs font-bold text-neonLime uppercase tracking-wider hover:underline">
+                                Mulai Latihan &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="jadwal" class="py-24 bg-neutral-950 border-t border-neutral-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-neonLime font-bold text-xs uppercase tracking-widest mb-2">JADWAL SESI & KELAS BONTANG</h2>
+                    <h3 class="font-heading font-black text-3xl sm:text-4xl text-white uppercase tracking-tight">PILIH WAKTU LATIHANFAVORITMU</h3>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+                    <div class="relative w-full sm:w-80">
+                        <input type="text" id="scheduleSearch" placeholder="Cari alat, instruktur, atau kelas..." class="w-full bg-darkCard border border-neutral-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-neonLime">
+                    </div>
+                    <div class="flex flex-wrap gap-2 justify-center" id="filterButtons">
+                        <button onclick="filterSchedule('all')" class="px-4 py-2 rounded-xl text-xs font-bold bg-neonLime text-black transition">SEMUA</button>
+                        <button onclick="filterSchedule('Bodybuilding')" class="px-4 py-2 rounded-xl text-xs font-bold bg-darkCard text-gray-300 border border-neutral-800 hover:border-neonLime transition">Bodybuilding</button>
+                        <button onclick="filterSchedule('Kardio')" class="px-4 py-2 rounded-xl text-xs font-bold bg-darkCard text-gray-300 border border-neutral-800 hover:border-neonLime transition">Kardio</button>
+                        <button onclick="filterSchedule('Atlit')" class="px-4 py-2 rounded-xl text-xs font-bold bg-darkCard text-gray-300 border border-neutral-800 hover:border-neonLime transition">Jalur Atlet</button>
+                    </div>
+                </div>
+
+                <!-- Schedule Table -->
+                <div class="bg-darkCard rounded-2xl border border-neutral-800 overflow-x-auto shadow-2xl">
+                    <table class="w-full text-left border-collapse min-w-[700px]" id="scheduleTable">
+                        <thead>
+                            <tr class="border-b border-neutral-800 bg-neutral-900/50 text-gray-400 text-xs font-bold uppercase tracking-wider">
+                                <th class="p-4 sm:p-6">Hari / Waktu</th>
+                                <th class="p-4 sm:p-6">Sesi Latihan</th>
+                                <th class="p-4 sm:p-6">Instruktur Ahli</th>
+                                <th class="p-4 sm:p-6">Zona Diamond Gym</th>
+                                <th class="p-4 sm:p-6 text-right">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-neutral-800 text-sm font-medium">
+                            <tr class="hover:bg-neutral-900/40 transition" data-category="Bodybuilding" data-name="senin bodybuilding diamond">
+                                <td class="p-4 sm:p-6 text-gray-300">Senin, 08:00 - 10:00</td>
+                                <td class="p-4 sm:p-6 font-bold text-white">Hypertrophy & Weight Training</td>
+                                <td class="p-4 sm:p-6 text-neonLime">Coach Diamond Pro</td>
+                                <td class="p-4 sm:p-6 text-gray-400">Lantai 2 (Alat Baru)</td>
+                                <td class="p-4 sm:p-6 text-right">
+                                    <a href="#membership" class="inline-block bg-neutral-900 border border-neutral-700 hover:bg-neonLime hover:text-black px-4 py-2 rounded-lg text-xs font-bold transition">Booking</a>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-neutral-900/40 transition" data-category="Kardio" data-name="selasa kardio & fat loss">
+                                <td class="p-4 sm:p-6 text-gray-300">Selasa, 16:00 - 18:00</td>
+                                <td class="p-4 sm:p-6 font-bold text-white">Cardio & Fat Burning</td>
+                                <td class="p-4 sm:p-6 text-neonLime">Coach Satimpo Team</td>
+                                <td class="p-4 sm:p-6 text-gray-400">Cardio Deck Area</td>
+                                <td class="p-4 sm:p-6 text-right">
+                                    <a href="#membership" class="inline-block bg-neutral-900 border border-neutral-700 hover:bg-neonLime hover:text-black px-4 py-2 rounded-lg text-xs font-bold transition">Booking</a>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-neutral-900/40 transition" data-category="Atlit" data-name="rabu persiapan atlet jalur prestasi">
+                                <td class="p-4 sm:p-6 text-gray-300">Rabu, 15:30 - 18:00</td>
+                                <td class="p-4 sm:p-6 font-bold text-white">Pembinaan Atlet Berprestasi</td>
+                                <td class="p-4 sm:p-6 text-neonLime">Master Coach Bontang</td>
+                                <td class="p-4 sm:p-6 text-gray-400">Main Arena Lt. 2</td>
+                                <td class="p-4 sm:p-6 text-right">
+                                    <a href="#membership" class="inline-block bg-neutral-900 border border-neutral-700 hover:bg-neonLime hover:text-black px-4 py-2 rounded-lg text-xs font-bold transition">Booking</a>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-neutral-900/40 transition" data-category="Bodybuilding" data-name="kamis strength training">
+                                <td class="p-4 sm:p-6 text-gray-300">Kamis, 09:00 - 11:00</td>
+                                <td class="p-4 sm:p-6 font-bold text-white">Advanced Strength Building</td>
+                                <td class="p-4 sm:p-6 text-neonLime">Coach Diamond Pro</td>
+                                <td class="p-4 sm:p-6 text-gray-400">Lantai 2 (Free Weights)</td>
+                                <td class="p-4 sm:p-6 text-right">
+                                    <a href="#membership" class="inline-block bg-neutral-900 border border-neutral-700 hover:bg-neonLime hover:text-black px-4 py-2 rounded-lg text-xs font-bold transition">Booking</a>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-neutral-900/40 transition" data-category="Kardio" data-name="jumat endurance & stamina">
+                                <td class="p-4 sm:p-6 text-gray-300">Jumat, 16:30 - 18:30</td>
+                                <td class="p-4 sm:p-6 font-bold text-white">Endurance & Core Conditioning</td>
+                                <td class="p-4 sm:p-6 text-neonLime">Coach Satimpo Team</td>
+                                <td class="p-4 sm:p-6 text-gray-400">Main Hall</td>
+                                <td class="p-4 sm:p-6 text-right">
+                                    <a href="#membership" class="inline-block bg-neutral-900 border border-neutral-700 hover:bg-neonLime hover:text-black px-4 py-2 rounded-lg text-xs font-bold transition">Booking</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="trainer" class="py-24 bg-darkBg border-t border-neutral-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-neonLime font-bold text-xs uppercase tracking-widest mb-2">PELATIH PROFESIONAL</h2>
+                    <h3 class="font-heading font-black text-3xl sm:text-4xl text-white uppercase tracking-tight">SIAP MEMBIMBING ANDA</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Trainer 1 -->
+                    <div class="bg-darkCard rounded-2xl border border-neutral-800 p-6 text-center group hover:border-neonLime/50 transition duration-300">
+                        <div class="w-36 h-36 mx-auto mb-6 rounded-full overflow-hidden border-2 border-neonLime/40 group-hover:border-neonLime transition">
+                            <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=600&auto=format&fit=crop" alt="Coach Arifin" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-heading font-extrabold text-xl text-white mb-1">Coach Arifin, CPT</h4>
+                        <span class="inline-block text-xs font-bold text-neonLime mb-4">Senior Athlets Mentor & Bodybuilding Specialist</span>
+                        <p class="text-gray-400 text-sm italic mb-6">
+                            "Tanya dikit langsung dijelasin sampai paham. Di Diamond Gym, kami cetak prestasi nyata, bukan sekadar janji."
+                        </p>
+                        <div class="pt-4 border-t border-neutral-800 text-xs text-gray-500 uppercase tracking-widest font-bold">
+                            Spesialisasi: Jalur Prestasi & Latihan Beban Lt. 2
+                        </div>
+                    </div>
+
+                    <!-- Trainer 2 -->
+                    <div class="bg-darkCard rounded-2xl border border-neutral-800 p-6 text-center group hover:border-neonLime/50 transition duration-300">
+                        <div class="w-36 h-36 mx-auto mb-6 rounded-full overflow-hidden border-2 border-neonLime/40 group-hover:border-neonLime transition">
+                            <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=600&auto=format&fit=crop" alt="Coach Dian" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-heading font-extrabold text-xl text-white mb-1">Coach Dian, CES</h4>
+                        <span class="inline-block text-xs font-bold text-neonLime mb-4">Fat Loss & Weight Management Expert</span>
+                        <p class="text-gray-400 text-sm italic mb-6">
+                            "Jangan takut salah masuk gym! Suasana Diamond Gym sangat nyaman, ramah pemula, dan penuh semangat kekeluargaan."
+                        </p>
+                        <div class="pt-4 border-t border-neutral-800 text-xs text-gray-500 uppercase tracking-widest font-bold">
+                            Spesialisasi: Kardio & Transformasi Tubuh Wanita
+                        </div>
+                    </div>
+
+                    <!-- Trainer 3 -->
+                    <div class="bg-darkCard rounded-2xl border border-neutral-800 p-6 text-center group hover:border-neonLime/50 transition duration-300">
+                        <div class="w-36 h-36 mx-auto mb-6 rounded-full overflow-hidden border-2 border-neonLime/40 group-hover:border-neonLime transition">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop" alt="Coach Maya" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-heading font-extrabold text-xl text-white mb-1">Coach Maya, E-RYT</h4>
+                        <span class="inline-block text-xs font-bold text-neonLime mb-4">Mobility & Functional Training Specialist</span>
+                        <p class="text-gray-400 text-sm italic mb-6">
+                            "Kenyamanan fasilitas dan kelengkapan alat di lantai 2 adalah kunci utama Anda betah berolahraga setiap hari."
+                        </p>
+                        <div class="pt-4 border-t border-neutral-800 text-xs text-gray-500 uppercase tracking-widest font-bold">
+                            Spesialisasi: Mobility, Core & Pemulihan
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ulasan" class="py-24 bg-neutral-950 border-t border-neutral-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-neonLime font-bold text-xs uppercase tracking-widest mb-2">ULASAN GOOGLE MAPS (4.7 ⭐)</h2>
+                    <h3 class="font-heading font-black text-3xl sm:text-4xl text-white uppercase tracking-tight">APA KATA MEMBER DIAMOND GYM?</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Review 1 -->
+                    <div class="bg-darkCard rounded-2xl border border-neutral-800 p-6 relative flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-1 text-amber-400 mb-3 text-sm">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                <span class="text-gray-400 text-xs ml-2">4 bulan lalu</span>
+                            </div>
+                            <p class="text-gray-300 text-sm italic mb-6 leading-relaxed">
+                                "Sebelum ambil keputusan buat member gym, riset dulu buat netapin member dimana. Terpautnya sama Gym yang punya nama besar karena banyak mencetak atlet berprestasi dari Kota Taman ini."
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-neutral-800 flex items-center justify-between">
+                            <span class="font-bold text-white text-xs">Ayu Khaerunnisa</span>
+                            <span class="text-[10px] text-neonLime font-bold uppercase">Google Reviewer</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-darkCard rounded-2xl border border-neutral-800 p-6 relative flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-1 text-amber-400 mb-3 text-sm">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                <span class="text-gray-400 text-xs ml-2">4 bulan lalu</span>
+                            </div>
+                            <p class="text-gray-300 text-sm italic mb-6 leading-relaxed">
+                                "Tempatnya nyaman bgt alatnya sangat lengkap, banyak alat baru, di lantai 2, trainer nya oke bgt tanyak dikit langsung di jelasin, tunggu apa lagi, yook gass ke diamond gym!"
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-neutral-800 flex items-center justify-between">
+                            <span class="font-bold text-white text-xs">DEK ARIK</span>
+                            <span class="text-[10px] text-neonLime font-bold uppercase">Google Reviewer</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-darkCard rounded-2xl border border-neutral-800 p-6 relative flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-1 text-amber-400 mb-3 text-sm">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                <span class="text-gray-400 text-xs ml-2">4 bulan lalu</span>
+                            </div>
+                            <p class="text-gray-300 text-sm italic mb-6 leading-relaxed">
+                                "Tempat gym terbaik sih menurut aq disini 😍, awalnya sering dengar2 katanya disini tempatnya para atlit, jd penasaran pengen coba juga walau awalnya ragu, takut salah masuk, tapi semua terbantahkan!"
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-neutral-800 flex items-center justify-between">
+                            <span class="font-bold text-white text-xs">Rahma Reyka</span>
+                            <span class="text-[10px] text-neonLime font-bold uppercase">Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="membership" class="py-24 bg-darkBg border-t border-neutral-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-neonLime font-bold text-xs uppercase tracking-widest mb-2">INVESTASI KESEHATAN & PRESTASI</h2>
+                    <h3 class="font-heading font-black text-3xl sm:text-4xl text-white uppercase tracking-tight">PILIH PAKET MEMBER DIAMOND GYM</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Package Basic -->
+                    <div class="bg-darkCard rounded-2xl border border-neutral-800 p-8 flex flex-col justify-between hover:border-neutral-700 transition">
+                        <div>
+                            <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">STARTER</span>
+                            <h4 class="font-heading font-black text-2xl text-white mt-1 mb-4">BASIC TIER</h4>
+                            <div class="mb-6">
+                                <span class="text-3xl sm:text-4xl font-black text-white">Rp 150rb</span>
+                                <span class="text-gray-400 text-sm">/bulan</span>
+                            </div>
+                            <ul class="space-y-4 text-sm text-gray-300 mb-8">
+                                <li class="flex items-center space-x-3"><span class="text-neonLime font-bold">✓</span> <span>Akses Full Gym Satimpo</span></li>
+                                <li class="flex items-center space-x-3"><span class="text-neonLime font-bold">✓</span> <span>Fasilitas Alat Lantai 2</span></li>
+                                <li class="flex items-center space-x-3 text-gray-600"><span>✕</span> <span class="line-through">Bimbingan Private Coach</span></li>
+                                <li class="flex items-center space-x-3 text-gray-600"><span>✕</span> <span class="line-through">Program Jalur Atlet Khusus</span></li>
+                            </ul>
+                        </div>
+                        <button onclick="registerMember('Basic Tier (Rp 150rb)')" class="w-full bg-neutral-900 border border-neutral-700 text-white font-bold py-3 rounded-xl uppercase text-xs tracking-wider hover:bg-neonLime hover:text-black transition">
+                            Pilih Basic
+                        </button>
+                    </div>
+
+                    <!-- Package Pro (Popular) -->
+                    <div class="bg-darkCard rounded-2xl border-2 border-neonLime p-8 flex flex-col justify-between relative shadow-2xl glow-lime">
+                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-neonLime text-black font-extrabold text-[10px] px-3 py-1 rounded-full uppercase tracking-widest">
+                            Paling Populer di Bontang
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-neonLime uppercase tracking-wider">RECOMMENDED</span>
+                            <h4 class="font-heading font-black text-2xl text-white mt-1 mb-4">PRO TIER</h4>
+                            <div class="mb-6">
+                                <span class="text-3xl sm:text-4xl font-black text-white">Rp 250rb</span>
+                                <span class="text-gray-400 text-sm">/bulan</span>
+                            </div>
+                            <ul class="space-y-4 text-sm text-gray-300 mb-8">
+                                <li class="flex items-center space-x-3"><span class="text-neonLime font-bold">✓</span> <span>Akses Full Gym Tanpa Batas</span></li>
+                                <li class="flex items-center space-x-3"><span class="text-neonLime font-bold">✓</span> <span>Konsultasi Trainer Kapan Saja</span></li>
+                                <li class="flex items-center space-x-3"><span class="text-neonLime font-bold">✓</span> <span>Free Akses Alat Baru Lantai 2</span></li>
+                                <li class="flex items-center space-x-3 text-gray-600"><span>✕</span> <span class="line-through">Private Locker Eksklusif</span></li>
+                            </ul>
+                        </div>
+                        <button onclick="registerMember('Pro Tier (Rp 250rb)')" class="w-full bg-neonLime text-black font-extrabold py-3 rounded-xl uppercase text-xs tracking-wider hover:bg-emerald-400 transition">
+                            Pilih Pro
+                        </button>
+                    </div>
+
+                    <!-- Package Platinum -->
+                    <div class="bg-darkCard rounded-2xl border border-neutral-800 p-8 flex flex-col justify-between hover:border-neutral-700 transition">
+                        <div>
+                            <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">JALUR PRESTASI VIP</span>
+                            <h4 class="font-heading font-black text-2xl text-white mt-1 mb-4">PLATINUM ATHLETIC</h4>
+                            <div class="mb-6">
+                                <span class="text-3xl sm:text-4xl font-black text-white">Rp 450rb</span>
+                                <span class="text-gray-400 text-sm">/bulan</span>
+                            </div>
+                            <ul class="space-y-4 text-sm text-gray-300 mb-8">
+                                <li class="flex items-center space-x-3"><span class="text-neonLime font-bold">✓</span> <span>Semua Fasilitas Pro Tier</span></li>
+                                <li class="flex items-center space-x-3"><span class="text-neonLime font-bold">✓</span> <span>Pendampingan Khusus Calon Atlet</span></li>
+                                <li class="flex items-center space-x-3"><span class="text-neonLime font-bold">✓</span> <span>Private Locker & Handuk</span></li>
+                                <li class="flex items-center space-x-3"><span class="text-neonLime font-bold">✓</span> <span>Program Nutrisi & Suplemen</span></li>
+                            </ul>
+                        </div>
+                        <button onclick="registerMember('Platinum Athletic (Rp 450rb)')" class="w-full bg-neutral-900 border border-neutral-700 text-white font-bold py-3 rounded-xl uppercase text-xs tracking-wider hover:bg-neonLime hover:text-black transition">
+                            Pilih Platinum
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak" class="py-24 bg-neutral-950 border-t border-neutral-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-neonLime font-bold text-xs uppercase tracking-widest mb-2">KUNJUNGI LOKASI KAMI DI BONTANG</h2>
+                    <h3 class="font-heading font-black text-3xl sm:text-4xl text-white uppercase tracking-tight">ALAMAT & KONTAK RESMI</h3>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <div class="bg-darkCard rounded-2xl border border-neutral-800 p-6">
+                            <h4 class="font-heading font-bold text-lg text-white mb-2">DIAMOND GYM (Gym Jalur Prestasi)</h4>
+                            <p class="text-gray-400 text-sm mb-4">Jl. HM Ardans, Satimpo, Kec. Bontang Sel., Kota Bontang, Kalimantan Timur 75325</p>
+                            <div class="space-y-2 text-xs text-gray-300">
+                                <div class="flex justify-between py-1 border-b border-neutral-800">
+                                    <span class="font-bold">Status Hari Ini:</span>
+                                    <span class="text-neonLime font-bold">Buka · Tutup pukul 22.00 WITA</span>
+                                </div>
+                                <div class="flex justify-between py-1 border-b border-neutral-800">
+                                    <span class="font-bold">Nomor Telepon / WhatsApp:</span>
+                                    <span class="text-white font-bold">0812-5441-4004</span>
+                                </div>
+                                <div class="flex justify-between py-1 border-b border-neutral-800">
+                                    <span class="font-bold">Instagram Owner:</span>
+                                    <a href="https://www.instagram.com/dion_diamondgym?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" class="text-neonLime hover:underline font-bold">@dion_diamondgym</a>
+                                </div>
+                                <div class="flex justify-between py-1 items-center">
+                                    <span class="font-bold">Google Maps Resmi:</span>
+                                    <a href="https://maps.app.goo.gl/GbKntEzEso8egiro7" target="_blank" class="bg-neonLime text-black font-extrabold px-3 py-1 rounded-lg hover:bg-emerald-400 transition text-[11px] uppercase">Buka Google Maps ↗</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Embedded Map simulation with direct link overlay -->
+                        <div class="rounded-2xl overflow-hidden border border-neutral-800 h-64 bg-neutral-900 relative group">
+                            <iframe title="Diamond Gym Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.673891234!2d117.485!3d0.125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTInMjkuMiJTIDExN8KwMjknMjkuOSJF!5e0!3m2!1sid!2sid!4v1620000000000!5m2!1sid!2sid" width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg) brightness(85%) contrast(90%);" allowfullscreen="" loading="lazy"></iframe>
+                            <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                                <a href="https://maps.app.goo.gl/GbKntEzEso8egiro7" target="_blank" class="bg-neonLime text-black font-extrabold px-6 py-3 rounded-xl text-xs uppercase tracking-wider glow-lime transform translate-y-2 group-hover:translate-y-0 transition duration-300">
+                                    Buka Lokasi di Google Maps ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Registration WhatsApp Form -->
+                    <div class="bg-darkCard rounded-2xl border border-neutral-800 p-8 shadow-2xl">
+                        <h4 class="font-heading font-bold text-xl text-white mb-2">DAFTAR MEMBER VIA WHATSAPP</h4>
+                        <p class="text-gray-400 text-xs mb-6">Isi formulir singkat di bawah ini untuk terhubung langsung ke nomor resmi admin Diamond Gym Bontang (0812-5441-4004).</p>
+                        
+                        <form id="whatsappForm" onsubmit="sendWhatsApp(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-300 uppercase mb-2">Nama Lengkap</label>
+                                <input type="text" id="waName" required placeholder="Masukkan nama Anda..." class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-neonLime">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-300 uppercase mb-2">Pilihan Paket Member</label>
+                                <select id="waTier" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-neonLime">
+                                    <option value="Basic Tier (Rp 150rb)">Basic Tier (Rp 150rb)</option>
+                                    <option value="Pro Tier (Rp 250rb)" selected>Pro Tier - Populer (Rp 250rb)</option>
+                                    <option value="Platinum Athletic (Rp 450rb)">Platinum Athletic (Rp 450rb)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-300 uppercase mb-2">Catatan / Rencana Mulai Latihan</label>
+                                <textarea id="waNote" rows="3" placeholder="Contoh: Ingin mulai latihan di lantai 2 hari Senin..." class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-neonLime"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-neonLime text-black font-extrabold py-4 rounded-xl uppercase text-xs tracking-wider glow-lime glow-lime-hover transition duration-300">
+                                Kirim Konfirmasi ke WhatsApp (0812-5441-4004)
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-darkBg border-t border-neutral-900 py-12 text-center text-xs text-gray-500">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="font-heading font-black text-lg text-white mb-2">DIAMOND<span class="text-neonLime">.GYM</span> (Gym Jalur Prestasi)</p>
+            <p>Jl. HM Ardans, Satimpo, Kec. Bontang Sel., Kota Bontang, Kalimantan Timur 75325</p>
+            <p class="mt-4">© 2026 Diamond Gym Bontang. All Rights Reserved. Tempat Gym Ternyaman & Paling Oke di Bontang.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Filter Schedule Table function
+        function filterSchedule(category) {
+            const rows = document.querySelectorAll('#scheduleTable tbody tr');
+            rows.forEach(row => {
+                const rowCategory = row.getAttribute('data-category');
+                if (category === 'all' || rowCategory === category) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+
+        // Live Search Handler
+        document.getElementById('scheduleSearch').addEventListener('input', function(e) {
+            const term = e.target.value.toLowerCase();
+            const rows = document.querySelectorAll('#scheduleTable tbody tr');
+            rows.forEach(row => {
+                const name = row.getAttribute('data-name');
+                if (name.includes(term)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+
+        // Quick Register Tier selector helper
+        function registerMember(tierName) {
+            document.getElementById('waTier').value = tierName;
+            const contactSection = document.getElementById('kontak');
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // WhatsApp Form Sender
+        function sendWhatsApp(e) {
+            e.preventDefault();
+            const name = document.getElementById('waName').value;
+            const tier = document.getElementById('waTier').value;
+            const note = document.getElementById('waNote').value;
+
+            const adminPhone = "6281254414004"; // 0812-5441-4004
+            const message = `Halo Admin Diamond Gym Bontang, saya ingin mendaftar membership.%0A%0A*Nama:* ${name}%0A*Paket:* ${tier}%0A*Catatan:* ${note}%0A%0AMohon informasi selanjutnya untuk pembayaran dan jadwal mulai latihan di Jl. HM Ardans Satimpo. Terima kasih!`;
+            
+            const whatsappURL = `https://wa.me/${adminPhone}?text=${message}`;
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+</body>
+</html>
